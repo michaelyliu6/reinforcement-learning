@@ -56,7 +56,6 @@ def linear_schedule(
     """Return the appropriate epsilon for the current step.
     Epsilon should be start_e at step 0 and decrease linearly to end_e at step (exploration_fraction * total_timesteps).
     """
-    "SOLUTION"
     duration = exploration_fraction * total_timesteps
     slope = (end_e - start_e) / duration
     return max(slope * current_step + start_e, end_e)
