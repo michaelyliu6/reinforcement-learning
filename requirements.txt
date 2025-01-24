@@ -1,0 +1,13 @@
+einops==0.8.0
+gym==0.26.2
+gymnasium==0.29.0
+ipython==8.12.3
+jaxtyping==0.2.36
+matplotlib==3.10.0
+moviepy==2.1.2
+numpy==2.2.2
+opencv_python==4.10.0.84
+pandas==2.2.3
+plotly==5.24.1
+torch==2.5.1
+tqdm==4.66.5
