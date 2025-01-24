@@ -126,10 +126,10 @@ The code is built with:
   - Integration with existing PPO implementation
 
 ### 📝 On the Roadmap
-- **GPTO (Generalized Policy Trust Optimization)**
-  - Enhanced trust region optimization
-  - Multi-task policy adaptation
-  - Improved sample efficiency mechanisms
+- **GRPO (Group Relative Policy Optimization)**
+  - Pure RL training without SFT coldstart
+  - Sparse reward optimization from scratch
+  - Credit assignment across group interactions
 
 ### 💭 Future Ideas
 - Distributed training for large-scale environments
