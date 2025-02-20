@@ -1,138 +1,107 @@
 # 🤖 Reinforcement Learning Implementations
 
-Playing around with reinforcement learning algorithms - from the classics to modern deep RL. This repo walks through my implementations of various RL approaches, with detailed documentation and experimental results.
+A comprehensive collection of reinforcement learning implementations - from fundamental algorithms to modern deep RL approaches. This repository provides detailed implementations of various RL methods with clear documentation and experimental results.
 
 ## 🎯 Implementations
 
-### 🎲 Classical Methods
-- **Multi-Armed Bandits**
-  - Exploration vs exploitation trade-off analysis
-  - Implementation of UCB, ε-greedy, and optimistic initialization
-  - Custom environments for both stationary and non-stationary reward distributions
-  - Empirical analysis of convergence rates
+### Classical Methods
 
-- **Tabular Methods**
-  - Q-Learning and SARSA with convergence guarantees
-  - Dynamic programming for policy evaluation and improvement
-  - Implementation of various exploration strategies
-  - Custom grid world environments with configurable dynamics
+#### Multi-Armed Bandits & Tabular Methods
+- Comparison of exploration vs exploitation strategies
+  - UCB (Upper Confidence Bound)
+  - ε-greedy with optimistic initialization
+  - Cheater and Random Agents
+- Policy evaluation and iteration
+- Dynamic programming methods
+- Comprehensive analysis of convergence rates
 
-### 🧠 Deep Reinforcement Learning
-- **Deep Q-Network (DQN)**
-  - Experience replay for sample efficiency
-  - Target networks for training stability
-  - Prioritized replay buffer implementation
-  - Comprehensive hyperparameter tuning analysis
-  - Integration with classic control environments
+#### SARSA & Q-Learning
+- On-policy vs off-policy TD control
+- Experience replay implementation
+- Custom environments with configurable dynamics
+- Comparative performance analysis
 
-- **Proximal Policy Optimization (PPO)**
-  - Parallel environment processing for efficient training
-  - Clipped surrogate objective implementation
-  - Generalized Advantage Estimation (GAE)
-  - Adaptive learning rate scheduling
-  - Support for both discrete and continuous action spaces
+### Deep Reinforcement Learning 
 
-## 🛠️ Technical Implementation
+#### DQN (Deep Q-Network)
+- Experience replay buffer
+- Target network for stability
+- Prioritized experience replay
+- DQN implementation
+- Integration with gym environments
 
-### 🏗️ Architecture Design
-- Modular implementation separating agents, environments, and training loops
-- Type-safe codebase with comprehensive static typing
-- Vectorized operations for computational efficiency
-- Custom environment wrappers extending OpenAI Gymnasium
+#### PPO (Proximal Policy Optimization)  
+- Actor-critic architecture
+- GAE (Generalized Advantage Estimation)
+- Clipped surrogate objective
+- Parallel environment processing
+- Support for discrete/continuous actions
 
-### ⚡ Performance Optimization
-- Parallel environment execution for PPO
-- Efficient replay buffer implementation using NumPy
-- Vectorized advantage calculation
-- Optimized policy network architectures
+#### RLHF (Reinforcement Learning from Human Feedback)
+- Simple Function-Based Reward Model
+- Policy iteration with preference learning
+- Integration with language models
+- KL-divergence penalty implementation
 
-### 📊 Experiment Tracking
-- Integration with Weights & Biases for:
-  - Hyperparameter optimization
-  - Training metrics visualization
-  - Model performance analysis
-  - Learning curves and reward tracking
+## 🚀 Getting Started
 
-## 📁 Project Structure
-
-```
-.
-├── multi_armed_bandit_tabular/              # Foundational RL concepts
-│   └── multiarmed_bandit_and_tabular_rl.ipynb
-│       - Multi-armed bandit implementations
-│       - Tabular Q-learning and SARSA
-│       - Dynamic programming methods
-│
-├── sarsa_q-learning_dqn/                    # Deep Q-Learning implementation
-│   └── SARSA_Q-Learning_DQN.ipynb
-│       - DQN with experience replay
-│       - Target network implementation
-│       - Classic control environment integration
-│
-├── proximal_policy_optimization_ppo/        # Advanced policy optimization
-│   └── ppo.ipynb
-│       - PPO implementation with parallel training
-│       - GAE computation
-│       - Policy and value network architectures
-│
-├── plot_utils.py                           # Plotting utilities
-│   - Visualization functions
-│   - Training curve plotting
-│
-└── utils.py                                # Shared utilities and environments
-    - Custom environment implementations
-    - Training helper functions
-    - Common utility functions
-```
-
-## 🚀 Tech Stack
-
-Built with modern ML tools:
-- **🔥 PyTorch**: Neural networks and autograd
-- **🎮 OpenAI Gymnasium**: Environment simulation
-- **🔢 NumPy/Einops**: Efficient computation
-- **📈 Weights & Biases**: Experiment tracking
-- **✨ Type Hints**: Code reliability
-- **📊 Plotly**: Interactive visualizations
-
-## 🏃‍♂️ Getting Started
-
+1. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-Each notebook comes packed with:
-- Theoretical background and math
-- Implementation details with docs
-- Experimental results and analysis
+2. Run experiments:
+```python 
+# Multi-armed bandit example
+python multi_armed_bandit_tabular/multiarmed_bandit_and_tabular_rl.py
+
+# DQN example 
+python SARSA_Q-Learning_DQN/SARSA_Q-Learning_DQN.py
+
+# PPO example
+python proximal_policy_optimization_ppo/ppo.py
+
+# RLHF example
+python rlhf/rlhf.py
+```
+
+## 📊 Project Structure
+
+```
+.
+├── multi_armed_bandit_tabular/     # Classic RL algorithms
+├── SARSA_Q-Learning_DQN/           # Value-based methods
+├── proximal_policy_optimization_ppo/# Policy optimization 
+├── rlhf/                           # Human feedback learning
+├── utils.py                        # Shared utilities
+├── plot_utils.py                   # Visualization helpers
+└── requirements.txt                # Dependencies
+```
+
+## 🛠️ Tech Stack
+
+- **PyTorch** - Deep learning & autograd
+- **Gymnasium (OpenAI Gym)** - RL environments
+- **NumPy/Einops** - Efficient computation
+- **Weights & Biases** - Experiment tracking
+- **Plotly** - Interactive visualizations
+
+## 📑 Documentation
+
+Each implementation includes:
+- Theoretical background
+- Implementation details
+- Experimental results & analysis
 - Hyperparameter tuning studies
-- Learning visualizations
+- Training visualizations
 
-## 💡 Implementation Notes
+## 🤝 Contributing
 
-The code is built with:
-- Clean, readable implementations following theory
-- Detailed documentation explaining concepts
-- Efficient vectorized operations
-- Reproducible results (fixed seeds)
-- Flexible, extensible architectures
+Contributions are welcome! Please feel free to submit pull requests or create issues for bugs and feature requests.
 
-## 🔮 What's Next?
+## 🔗 References
 
-### 🚧 In Progress
-- **RLHF (Reinforcement Learning from Human Feedback)**
-  - Reward model training pipeline
-  - Human feedback collection interface
-  - Integration with existing PPO implementation
-
-### 📝 On the Roadmap
-- **GRPO (Group Relative Policy Optimization)**
-  - Pure RL training without SFT coldstart
-  - Sparse reward optimization from scratch
-  - Credit assignment across group interactions
-
-### 💭 Future Ideas
-- Distributed training for large-scale environments
-- MuJoCo integration for robotics
-- Offline RL algorithms
-- Multi-agent RL extensions
+- [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html) by Sutton & Barto
+- [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+- [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/pdf/1312.5602)
+- [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
