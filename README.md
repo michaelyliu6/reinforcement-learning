@@ -59,10 +59,10 @@ python multi_armed_bandit_tabular/multiarmed_bandit_and_tabular_rl.py
 python SARSA_Q-Learning_DQN/SARSA_Q-Learning_DQN.py
 
 # PPO example
-python proximal_policy_optimization_ppo/ppo.py
+python proximal_policy_optimization/ppo.py
 
 # RLHF example
-python rlhf/rlhf.py
+python reinforcement_learning_from_human_feedback/rlhf.py
 ```
 
 ## 📊 Project Structure
@@ -71,8 +71,8 @@ python rlhf/rlhf.py
 .
 ├── multi_armed_bandit_tabular/     # Classic RL algorithms
 ├── SARSA_Q-Learning_DQN/           # Value-based methods
-├── proximal_policy_optimization_ppo/# Policy optimization 
-├── rlhf/                           # Human feedback learning
+├── proximal_policy_optimization/   # Policy optimization 
+├── reinforcement_learning_from_human_feedback/ # Human feedback learning
 ├── utils.py                        # Shared utilities
 ├── plot_utils.py                   # Visualization helpers
 └── requirements.txt                # Dependencies
